@@ -9,8 +9,8 @@ fn main() {
         .read_line(&mut nth)
         .expect("Failed to read line.");
 
-    let nth = match nth.trim().parse() {
-        Ok(num) => Ok(num),
+    let nth: u32 = match nth.trim().parse() {
+        Ok(num) => num,
         Err(_) => {
             println!("Invalid number");
             return;
