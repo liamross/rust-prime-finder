@@ -9,8 +9,8 @@ fn main() {
         .read_line(&mut nth)
         .expect("Failed to read line.");
 
-    let nth = match input_parser(nth) {
-        Ok(num) => num,
+    let nth = match nth.trim().parse() {
+        Ok(num) => Ok(num),
         Err(_) => {
             println!("Invalid number");
             return;
@@ -59,10 +59,3 @@ fn find_prime_iterative(initial: u32) -> u32 {
 
 //     find_prime_recursive(curr, curr + 1, left - 1)
 // }
-
-fn input_parser(input: String) -> Result<u32, ()> {
-    return match input.trim().parse() {
-        Ok(num) => Ok(num),
-        Err(_) => Err(()),
-    };
-}
