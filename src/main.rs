@@ -29,12 +29,15 @@ fn find_prime_iterative(initial: u32) -> u32 {
     let mut prime_count = 0;
 
     while prime_count < initial {
-        for denom in 2..curr {
+        let mut denom = 2;
+        while denom < curr {
             if curr % denom == 0 {
                 curr = curr + 1;
                 continue;
             }
+            denom += 1;
         }
+
         prime = curr;
         curr = curr + 1;
         prime_count = prime_count + 1;
