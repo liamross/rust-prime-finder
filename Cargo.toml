@@ -1,0 +1,6 @@
+[package]
+name = "find-prime"
+version = "0.1.0"
+authors = ["liamross <liamross.code@gmail.com>"]
+
+[dependencies]
