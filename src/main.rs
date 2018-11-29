@@ -18,7 +18,6 @@ fn main() {
     };
 
     let prime = find_prime_iterative(nth);
-    // let prime = find_prime_recursive(1, 1, nth);
 
     println!("Prime number: {}", prime);
 }
@@ -45,17 +44,3 @@ fn find_prime_iterative(initial: u32) -> u32 {
 
     return prime;
 }
-
-// fn find_prime_recursive(prime: u64, curr: u64, left: u32) -> u64 {
-//     if left <= 0 {
-//         return prime;
-//     }
-
-//     for denom in 2..curr {
-//         if curr % denom == 0 {
-//             return find_prime_recursive(prime, curr + 1, left);
-//         }
-//     }
-
-//     find_prime_recursive(curr, curr + 1, left - 1)
-// }
