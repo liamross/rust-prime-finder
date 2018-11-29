@@ -1,9 +1,9 @@
 use std::io;
 
 fn main() {
-    let mut nth = String::new();
-
     println!("\nInput the nth prime number you wish to find.");
+
+    let mut nth = String::new();
 
     io::stdin()
         .read_line(&mut nth)
